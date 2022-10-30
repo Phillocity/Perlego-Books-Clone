@@ -1,20 +1,28 @@
-import Head from "next/head";
-import Image from "next/image";
-import bookInterface from "@/types/bookType";
-import { GetStaticProps, InferGetStaticPropsType } from 'next'
-import Link from "next/link";
+import Head from 'next/head';
+import Image from 'next/image';
+import Link from 'next/link';
+import getDomain from '@/utils/domainName';
+import bookInterface from '@/types/bookType';
+import { GetStaticProps, InferGetStaticPropsType } from 'next';
 
+/* ---------------------------------------------------------------------------------------------- */
+/*                        Initial data fetching to return data from server                        */
+/* ---------------------------------------------------------------------------------------------- */
+export const getServerSideProps: GetStaticProps = async context => {
+  const res = await fetch(`${getDomain()}/api/books`, {
+    method: 'GET',
+    headers: {
+      Authorization: `Perlego${process.env.SECRET_KEY}`,
+    },
+  });
 
-export const getServerSideProps: GetStaticProps = async () => {
-  const res = await fetch("http://localhost:3000/api/maxBooks");
   const books: bookInterface[] = await res.json();
   return {
-    props: {books},
-  }
-}
+    props: { books },
+  };
+};
 
-
-export default function BookRecommend({books} : InferGetStaticPropsType<typeof getServerSideProps>) {
+export default function BookRecommend({ books }: InferGetStaticPropsType<typeof getServerSideProps>) {
   return (
     <>
       <Head>
