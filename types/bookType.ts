@@ -1,4 +1,5 @@
 export default interface bookInterface {
+  _id: string;
   unique_url: string,
   title: string,
   author: string,

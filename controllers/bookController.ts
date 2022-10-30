@@ -2,7 +2,6 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import Book from "@models/bookModel";
 import bookInterface from "@/types/bookType";
 
-
 /* ---------------------------------------------------------------------------------------------- */
 /*                    Retrieve 10 random books from the database                                  */
 /* ---------------------------------------------------------------------------------------------- */
@@ -10,7 +9,7 @@ const get10Books = async (req: NextApiRequest, res: NextApiResponse) => {
   try {
     const Books: bookInterface[] = await Book.aggregate([
       { $sample: { size: 10 } },
-      { $project: { _id: 0, language: 0 } },
+      { $project: {language: 0 } },
     ]);
 
     res.status(200).json(Books);
@@ -30,13 +29,12 @@ const getMaxBooks = async (req: NextApiRequest, res: NextApiResponse) => {
     if (req.query.secret !== process.env.SECRET_KEY)
       return res.status(401).json({ message: "Not Authorized" });
 
-    const Books = await Book.aggregate([
+    const Books: bookInterface[] = await Book.aggregate([
       { $sample: { size: 36 } },
-      { $project: { _id: 0, language: 0 } },
+      { $project: {language: 0 } },
     ]);
 
     res.status(200).json(Books);
-
   } catch (error) {
     res.status(500).json({
       message: "Error getting all books",
@@ -44,6 +42,5 @@ const getMaxBooks = async (req: NextApiRequest, res: NextApiResponse) => {
     });
   }
 };
-
 
 export { get10Books, getMaxBooks };
