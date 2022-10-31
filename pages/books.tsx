@@ -4,6 +4,7 @@ import Link from 'next/link';
 import getDomain from '@/utils/domainName';
 import bookInterface from '@/types/bookType';
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
+import { Book } from '@/components/bookCard';
 
 /* ---------------------------------------------------------------------------------------------- */
 /*                        Initial data fetching to return data from server                        */
@@ -31,13 +32,11 @@ export default function BookRecommend({ books }: InferGetStaticPropsType<typeof 
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <h1>Book Recommendations</h1>
-      <ul>
-        {books.map((book: bookInterface) => (
-          <li key={book._id}>
-            <Link href={book.unique_url}>{book.title}</Link>
-          </li>
-        ))}
-      </ul>
+      {books.map((book: bookInterface) => (
+        <div key={book._id}>
+          <Book {...book} />
+        </div>
+      ))}
     </>
   );
 }
