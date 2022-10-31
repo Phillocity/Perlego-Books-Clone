@@ -1,5 +1,5 @@
 import { describe, expect, test } from '@jest/globals';
-import bookInterface from '@/types/bookType';
+import BookType from '@/types/BookType';
 import getDomain from '@utils/domainName';
 import axios from 'axios';
 
@@ -26,7 +26,7 @@ describe('Book Controller', () => {
 
   it('should return books with title, author, and image', async () => {
     const books = await response;
-    books.data.forEach((book: bookInterface) => {
+    books.data.forEach((book: BookType) => {
       expect(book.title).toBeTruthy();
       expect(book.author).toBeTruthy();
       expect(book.img).toBeTruthy();

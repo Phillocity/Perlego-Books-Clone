@@ -1,16 +1,14 @@
 import Link from 'next/link';
-import bookInterface from '@/types/bookType';
+import BookType from '@/types/bookType';
+import Image from 'next/image';
+import style from '@/styles/bookCard.module.scss';
 
-export const Book = (book: bookInterface) => {
+export default function Book(book: BookType) {
   return (
-    <div className="card">
-      <div className="card-body">
-        <h5 className="card-title">{book.title}</h5>
-        <p className="card-text">{book.description}</p>
-        <a href={book.unique_url} className="btn btn-primary">
-          Go somewhere
-        </a>
-      </div>
+    <div className={`${style.bookCard}`} key={book._id}>
+      <Link href={book.unique_url}>
+        <Image className="w-100" src={book.img} alt={book.title} width={160} height={245} />
+      </Link>
     </div>
   );
-};
+}

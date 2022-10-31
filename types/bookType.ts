@@ -1,4 +1,4 @@
-export default interface bookInterface {
+export default interface BookType {
   _id: string;
   unique_url: string,
   title: string,
