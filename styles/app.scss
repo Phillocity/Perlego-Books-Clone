@@ -1,22 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
 @font-face {
   font-family: 'Wremena Bold';
   src: url('../fonts/Wremena Bold.woff') format('woff');
 }
 
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Wremena Bold', sans-serif;
+  font-family: 'Wremena Bold', Times, serif;
+}
+
+p {
+  font-family: 'Inter', Times, serif;
 }
 
 a {
-  color: inherit;
+  color: inherit !important;
   text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 * {
   box-sizing: border-box;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn ease 1s;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
 }
 
 @media (prefers-color-scheme: dark) {

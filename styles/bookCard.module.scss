@@ -1,3 +1,18 @@
+$radius: 0.5rem;
+
 .bookCard {
-  box-shadow: -2px 6px 19px 0px #7f818e;
+  position: relative;
+  max-width: 10rem;
+  min-height: 26rem;
+  margin: 1rem;
+
+  img {
+    border-radius: $radius;
+  }
+
+  &:hover {
+    img {
+      transform: translateY(-0.5rem, 0.5rem);
+    }
+  }
 }
