@@ -1,13 +1,13 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import Book from '@models/bookModel';
-import bookInterface from '@/types/bookType';
+import BookType from '@/types/BookType';
 
 /* ---------------------------------------------------------------------------------------------- */
 /*                    Retrieve 10 random books from the database                                  */
 /* ---------------------------------------------------------------------------------------------- */
 const get10Books = async (req: NextApiRequest, res: NextApiResponse) => {
   try {
-    const Books: bookInterface[] = await Book.aggregate([{ $sample: { size: 10 } }, { $project: { language: 0 } }]);
+    const Books: BookType[] = await Book.aggregate([{ $sample: { size: 10 } }, { $project: { language: 0 } }]);
 
     res.status(200).json(Books);
   } catch (error) {
@@ -23,7 +23,7 @@ const get10Books = async (req: NextApiRequest, res: NextApiResponse) => {
 /* ---------------------------------------------------------------------------------------------- */
 const getMaxBooks = async (req: NextApiRequest, res: NextApiResponse) => {
   try {
-    const Books: bookInterface[] = await Book.aggregate([{ $sample: { size: 36 } }, { $project: { language: 0 } }]);
+    const Books: BookType[] = await Book.aggregate([{ $sample: { size: 8 } }, { $project: { language: 0 } }]);
 
     res.status(200).json(Books);
   } catch (error) {

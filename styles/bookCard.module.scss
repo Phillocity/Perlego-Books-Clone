@@ -1,0 +1,60 @@
+$radius: 0.5rem;
+
+.bookCard {
+  max-width: 10rem;
+  min-height: 26rem;
+  margin: 1rem;
+
+  .bookImage {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    img {
+      box-shadow: -3px 2px 1rem 0px rgb(0 0 0 / 10%);
+      border-radius: $radius;
+      transition: all 0.2s ease-in-out;
+    }
+  }
+
+  .bookItem {
+    &:hover {
+      background-color: #c5c5c528;
+      border-radius: $radius;
+
+      .bookImage {
+        img {
+          position: relative;
+          transform: translate(-10px, -10px);
+          transition: all 0.3s ease-in-out;
+          filter: brightness(0.6);
+        }
+        &:after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: $radius;
+          border: 0.2rem dashed black;
+          z-index: -1;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+    }
+  }
+
+  .bookBody {
+    &:first-child {
+      white-space: pre-line;
+    }
+    p {
+      line-height: 1.5rem;
+    }
+    .categoryHighlight {
+      background-color: #242424;
+      color: white;
+      text-align: center;
+    }
+  }
+}
