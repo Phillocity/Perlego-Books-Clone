@@ -10,12 +10,12 @@ $radius: 0.5rem;
     width: 100%;
     height: 100%;
     img {
+      box-shadow: -3px 2px 1rem 0px rgb(0 0 0 / 10%);
       border-radius: $radius;
       transition: all 0.2s ease-in-out;
     }
   }
 
-  // Popout effect on hover + dark overlay on image
   .bookItem {
     &:hover {
       background-color: #c5c5c528;
@@ -45,9 +45,8 @@ $radius: 0.5rem;
   }
 
   .bookBody {
-    //first children of bookBody
     &:first-child {
-      white-space: pre-line
+      white-space: pre-line;
     }
     p {
       line-height: 1.5rem;
