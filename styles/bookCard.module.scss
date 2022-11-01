@@ -45,9 +45,7 @@ $radius: 0.5rem;
   }
 
   .bookBody {
-    &:first-child {
-      white-space: pre-line;
-    }
+    min-height: 10rem;
     p {
       line-height: 1.5rem;
     }
@@ -55,6 +53,10 @@ $radius: 0.5rem;
       background-color: #242424;
       color: white;
       text-align: center;
+    }
+
+    .doubleLine {
+      line-height: 2.4rem;
     }
   }
 }
