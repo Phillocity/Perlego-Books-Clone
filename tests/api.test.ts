@@ -1,5 +1,5 @@
 import { describe, expect, test } from '@jest/globals';
-import BookType from '@/types/BookType';
+import BookType from '@/types/bookType';
 import getDomain from '@utils/domainName';
 import axios from 'axios';
 
@@ -36,7 +36,7 @@ describe('Book Controller', () => {
   it('should return 200 status', async () => {
     const books = await axios.get(`${getDomain()}/api/books`, {
       headers: {
-        authorization: `Perlego${process.env.SECRET_KEY}`,
+        authorization: `Berlego${process.env.SECRET_KEY}`,
       },
     });
     expect(books.status).toBe(200);
