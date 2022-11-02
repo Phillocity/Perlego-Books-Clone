@@ -18,5 +18,5 @@ export default function Layout({ children, home }: LayoutChildProps) {
         )}
       </div>
     </>
-  );
+  )
 }

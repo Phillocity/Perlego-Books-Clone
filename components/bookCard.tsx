@@ -3,7 +3,7 @@ import BookType from '@/types/bookType';
 import Image from 'next/image';
 import style from '@/styles/bookCard.module.scss';
 
-export default function Book({ _id, unique_url, title, author, description, img, publisher, category, topic, year, pages }: BookType) {
+export default function Book({ _id, unique_url, title, author, img, category }: BookType) {
   return (
     <>
       {/* ---------------------------------------------------------------------------------------------- */
@@ -13,7 +13,7 @@ export default function Book({ _id, unique_url, title, author, description, img,
         <Link href={unique_url}>
           <div className={`${style.bookItem} pb-3`}>
             <div className={style.bookImage}>
-              <Image src={img} alt={title} width={160} height={245} />
+              <Image src={img} alt={title} width={160} height={245} className="fade-in" placeholder="blur" blurDataURL="/loader.svg" />
             </div>
 
             {/* ---------------------------------------------------------------------------------------------- */
@@ -28,6 +28,8 @@ export default function Book({ _id, unique_url, title, author, description, img,
             </div>
           </div>
         </Link>
+
+        <Image src="/save.svg" alt={title} width={160} height={245} className={`${style.bookmark} fade-in`} placeholder="blur" blurDataURL="/loader.svg" />
       </div>
     </>
   );

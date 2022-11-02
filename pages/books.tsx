@@ -9,7 +9,7 @@ import NavBar from '@/components/navBar';
 /* ---------------------------------------------------------------------------------------------- */
 /*                        Initial data fetching to return data from server                        */
 /* ---------------------------------------------------------------------------------------------- */
-export const getServerSideProps: GetStaticProps = async context => {
+export const getServerSideProps: GetStaticProps = async () => {
   const res = await fetch(`${getDomain()}/api/books`, {
     method: 'GET',
     headers: {
@@ -18,6 +18,7 @@ export const getServerSideProps: GetStaticProps = async context => {
   });
 
   const books: BookType[] = await res.json();
+
   return {
     props: { books },
   };
