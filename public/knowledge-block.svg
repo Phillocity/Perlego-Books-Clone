@@ -1,0 +1,20 @@
+<svg width="300" height="300" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect y="225" width="75" height="75" rx="11" fill="#FF8F81"/>
+<rect x="75" y="150" width="75" height="75" rx="11" fill="#FF8F81"/>
+<rect x="150" y="75" width="75" height="75" rx="11" fill="#FF8F81"/>
+<rect x="225" width="75" height="75" rx="11" fill="#FF8F81"/>
+<rect x="75" y="225" width="75" height="75" fill="#FF8F81"/>
+<rect x="150" y="225" width="75" height="75" fill="#FF8F81"/>
+<rect x="75" y="203" width="75" height="75" fill="#FF8F81"/>
+<rect x="43" y="225" width="75" height="75" fill="#FF8F81"/>
+<rect x="225" y="225" width="75" height="75" fill="#FF8F81"/>
+<rect x="225" y="150" width="75" height="75" fill="#FF8F81"/>
+<rect x="225" y="75" width="75" height="75" fill="#FF8F81"/>
+<rect x="225" y="61" width="75" height="75" fill="#FF8F81"/>
+<path d="M135 150H210V225H135V150Z" fill="#FF8F81"/>
+<path d="M164 150H239V225H164V150Z" fill="#FF8F81"/>
+<path d="M178 126H253V201H178V126Z" fill="#FF8F81"/>
+<path d="M178 75H253V150H178V75Z" fill="#FF8F81"/>
+<path d="M150 103H225V178H150V103Z" fill="#FF8F81"/>
+<path d="M299 78.5V300H48.5L104 292C134.681 282.796 177.962 269.33 197.497 262.252L207 257.5L241 227L263 190L278 149L299 78.5Z" fill="#FF796A"/>
+</svg>

@@ -5,6 +5,7 @@ const nextConfig = {
   images: {
     domains: ['www.perlego.com'],
   },
+
 };
 
 module.exports = nextConfig;

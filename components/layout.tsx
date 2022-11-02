@@ -9,10 +9,10 @@ export default function Layout({ children, home }: LayoutChildProps) {
       <Head>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="container p-0 col-8">
+      <div className="container p-0">
         <main>{children}</main>
         {!home && (
-          <div className="">
+          <div>
             <Link href="/">← Back to home</Link>
           </div>
         )}

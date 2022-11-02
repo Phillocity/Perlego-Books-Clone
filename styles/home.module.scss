@@ -1,0 +1,42 @@
+.fluid {
+  margin-left: calc(50% - 50vw);
+  .side {
+    display: grid;
+    height: 100vh;
+    overflow: hidden;
+    place-items: center;
+    position: absolute;
+
+    .title {
+      margin: 0px 10vw;
+      width: 80vw;
+    }
+
+    .widther{
+      margin: auto;
+      max-width: 46rem;
+    }
+
+
+  }
+
+  #left-side {
+    background-color: #b89aff;
+    width: 100vw;
+    z-index: 2;
+    margin:0px;
+    padding: 0px;
+  }
+  #right-side {
+    background-color: #fedf73;
+    width: 100vw;
+    margin:0px;
+    padding: 0px;
+  }
+}
+
+
+.imgRes{
+  max-width: 6rem;
+  min-width: 3rem;
+}

@@ -9,7 +9,7 @@ export default function Book({ _id, unique_url, title, author, description, img,
       {/* ---------------------------------------------------------------------------------------------- */
       /*                                        Image section of card                                       */
       /* ---------------------------------------------------------------------------------------------- */}
-      <div className={`${style.bookCard} px-0 fade-in col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2`} key={_id}>
+      <div className={`${style.bookCard} px-0 fade-in col-12 col-sm-6 col-md-4 col-lg-5 col-xl-3 col-xxl-2`} key={_id}>
         <Link href={unique_url}>
           <div className={`${style.bookItem} pb-3`}>
             <div className={style.bookImage}>
