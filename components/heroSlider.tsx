@@ -26,7 +26,7 @@ export default function HeroSlider({ books, alt }: { books: BookType[]; alt?: bo
         autoScroll: {
           speed: 1,
         },
-        speed:1000,
+        speed: 1000,
       }}
     >
       {books.map(({ img, title, _id, unique_url, year, author }: BookType) => {

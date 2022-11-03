@@ -1,14 +1,14 @@
-import { describe, expect, test } from '@jest/globals';
+import { describe, expect } from '@jest/globals';
+import { getDomain } from '@utils/domainName';
 import BookType from '@/types/bookType';
-import getDomain from '@utils/domainName';
 import axios from 'axios';
 
 describe('Book Controller', () => {
   let response: any;
   beforeAll(() => {
-    response = axios.get(`${getDomain()}/api/books`, {
+    response = axios.get(`${getDomain()}api/books`, {
       headers: {
-        authorization: `Perlego${process.env.SECRET_KEY}`,
+        authorization: `Perlego636D7B8896E513F83E62CA367BB6E`,
       },
     });
   });
@@ -24,6 +24,17 @@ describe('Book Controller', () => {
     expect(unique.size).toBe(books.data.length);
   });
 
+  it('should return books equal to the amount given in the request limit', async () => {
+    const limit = 10;
+    const books = await axios.get(`${getDomain()}api/books?limit=${limit}`, {
+      headers: {
+        authorization: `Perlego636D7B8896E513F83E62CA367BB6E`,
+      },
+    });
+    expect(books.data.length).toBe(limit);
+  });
+
+
   it('should return books with title, author, and image', async () => {
     const books = await response;
     books.data.forEach((book: BookType) => {
@@ -34,9 +45,9 @@ describe('Book Controller', () => {
   });
 
   it('should return 200 status', async () => {
-    const books = await axios.get(`${getDomain()}/api/books`, {
+    const books = await axios.get(`${getDomain()}api/books`, {
       headers: {
-        authorization: `Berlego${process.env.SECRET_KEY}`,
+        authorization: `Perlego636D7B8896E513F83E62CA367BB6E`,
       },
     });
     expect(books.status).toBe(200);

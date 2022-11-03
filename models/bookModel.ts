@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 
 const bookSchema = new mongoose.Schema({
   unique_url: {
@@ -24,6 +24,10 @@ const bookSchema = new mongoose.Schema({
   language: String,
 });
 
-const Book = mongoose.models.Book || mongoose.model("Book", bookSchema);
+/* ---------------------------------------------------------------------------------------------- */
+/*                 If the model exists after compilation, you can use it directly                 */
+/* ---------------------------------------------------------------------------------------------- */
+
+const Book = mongoose.models.Book || mongoose.model('Book', bookSchema);
 
 export default Book;

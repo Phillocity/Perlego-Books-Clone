@@ -4,7 +4,15 @@ import BookType from '@/types/bookType';
 import ListType from '@/types/listType';
 
 /* ---------------------------------------------------------------------------------------------- */
-/*                    Retrieve 10 random books from the database                                  */
+/*           Made for the creation of "Reading Lists" where we store book models inside.          */
+/*            This is a one-to-many relationship, but stored in a NoSQL format.                   */
+/*                                    Unfinished feature.                                         */
+/* ---------------------------------------------------------------------------------------------- */
+
+
+
+/* ---------------------------------------------------------------------------------------------- */
+/*                    Retrieve List from the database                                              */
 /* ---------------------------------------------------------------------------------------------- */
 const getAllList = async (req: NextApiRequest, res: NextApiResponse) => {
   try {

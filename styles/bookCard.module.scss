@@ -48,15 +48,19 @@ $radius: 0.5rem;
   }
 
   .bookBody {
-    min-height: 10rem;
+    min-height: 6.8rem;
     p {
-      line-height: 1.5rem;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      white-space: pre-line;
     }
     .categoryHighlight {
       background-color: #242424;
       color: white;
       text-align: center;
-      border-radius:10rem;
+      border-radius: 10rem;
     }
 
     .doubleLine {
@@ -68,13 +72,15 @@ $radius: 0.5rem;
     position: absolute;
     z-index: 1;
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
     top: -2.25rem;
     left: 5.563rem;
     color: #616161ad;
+    transition: all 0.2s ease-in-out;
   }
 
   .bookmark-trans {
+    display: block;
     transform: translate(-10px, -10px);
+    transition: all 0.2s ease-in-out;
   }
 }

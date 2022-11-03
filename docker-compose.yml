@@ -1,0 +1,8 @@
+version: '3'
+services:
+  app:
+    image: phillip-ebper
+    container_name: phillip-ebper
+    build: .
+    ports:
+      - "3000:3000"
