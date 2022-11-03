@@ -3,21 +3,12 @@ import Layout from '@/components/layout';
 import NavBar from '@/components/navBar';
 import style from '@/styles/home.module.scss';
 import { MouseEvent, TouchEvent, useEffect, useRef, useState } from 'react';
-import getDomain from '@/utils/domainName';
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
-import BookType from '@/types/bookType';
 import HeroSlider from '@/components/heroSlider';
-import Link from 'next/link';
+import { fetchData } from '@utils/fetcher';
 
 export const getServerSideProps: GetStaticProps = async () => {
-  const res = await fetch(`${getDomain()}/api/books`, {
-    method: 'GET',
-    headers: {
-      Authorization: `Berlego${process.env.SECRET_KEY}`,
-    },
-  });
-
-  const books: BookType[] = await res.json();
+  const books = await fetchData('books?limit=10');
 
   return {
     props: { books },

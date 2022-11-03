@@ -10,6 +10,7 @@ export default function HeroSlider({ books, alt }: { books: BookType[]; alt?: bo
   return (
     <Splide
       options={{
+        loop: true,
         gap: '2rem',
         arrows: false,
         pagination: false,
@@ -25,7 +26,7 @@ export default function HeroSlider({ books, alt }: { books: BookType[]; alt?: bo
         autoScroll: {
           speed: 1,
         },
-        loop: true,
+        speed:1000,
       }}
     >
       {books.map(({ img, title, _id, unique_url, year, author }: BookType) => {

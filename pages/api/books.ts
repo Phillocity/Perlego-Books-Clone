@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import connectDB from '@utils/connectDB';
-import { get10Books, getMaxBooks } from '@/controllers/bookController';
+import { getMaxBooks, getNthBooks, addBook, updateBook, deleteBook } from '@controllers/bookController';
 import isAuthorised from '@/utils/secretAuth';
 
 export default async function maxBooks(req: NextApiRequest, res: NextApiResponse) {
@@ -15,13 +15,20 @@ export default async function maxBooks(req: NextApiRequest, res: NextApiResponse
     await connectDB();
     switch (req.method) {
       case 'GET':
-        await getMaxBooks(req, res);
+        if (req.query.limit) {
+          await getNthBooks(req, res);
+        } else {
+          await getMaxBooks(req, res);
+        }
         break;
       case 'POST':
+        await addBook(req, res);
         break;
       case 'PUT':
+        await updateBook(req, res);
         break;
       case 'DELETE':
+        await deleteBook(req, res);
         break;
       default:
         res.status(400).json({ success: false });
