@@ -1,0 +1,28 @@
+.signUp, .explore {
+  background-color: #242424;
+  color: white;
+  padding: 0.4rem 1.5rem;
+  border-radius: 20px;
+  transition: all 0.1s ease-in-out;
+  opacity: 1;
+  border: 0;
+
+  &:hover {
+    opacity: 0.7;
+    border: 0;
+  }
+}
+
+.refresh {
+  background-color: #8383838e;
+  color: white;
+  padding: 0.01rem 1.5rem;
+  border-radius: 30px;
+  transition: all 0.2s ease-in-out;
+  border: 0;
+
+  &:hover {
+    background-color: #febf3b;
+    color: black;
+  }
+}
