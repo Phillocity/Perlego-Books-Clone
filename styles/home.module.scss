@@ -32,8 +32,11 @@
     padding: 0px;
   }
 
-  .lower{
+  .lower {
     transform: translateY(10px);
   }
 
+  .shadow {
+    text-shadow: 0px 1px 3px rgb(70 70 70 / 69%);
+  }
 }

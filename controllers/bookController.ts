@@ -3,6 +3,13 @@ import Book from '@models/bookModel';
 import BookType from '@/types/bookType';
 
 /* ---------------------------------------------------------------------------------------------- */
+/*        Setup for future extension for full CRUD, currently only utilises the GET method.       */
+/*          Additional features such as syncing MongoDB to Algolia index were scoped              */
+/* ---------------------------------------------------------------------------------------------- */
+
+
+
+/* ---------------------------------------------------------------------------------------------- */
 /*                                       Retrieve max 36 random Books                             */
 /* ---------------------------------------------------------------------------------------------- */
 const getMaxBooks = async (req: NextApiRequest, res: NextApiResponse) => {

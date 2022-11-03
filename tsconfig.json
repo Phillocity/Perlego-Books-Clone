@@ -25,7 +25,8 @@
       "@types/*": ["types/*"],
       "@components/*": ["components/*"],
       "@fonts/*": ["fonts/*"],
-      "@assets/*": ["public/*"]
+      "@assets/*": ["public/*"],
+      "@schema/*": ["schemas/*"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

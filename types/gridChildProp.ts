@@ -1,3 +1,3 @@
 export default interface GridChildProps {
-  children: React.ReactNode,
+  children: React.ReactNode;
 }
