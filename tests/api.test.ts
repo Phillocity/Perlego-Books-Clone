@@ -8,7 +8,7 @@ describe('Book Controller', () => {
   beforeAll(() => {
     response = axios.get(`${getDomain()}api/books`, {
       headers: {
-        authorization: `Perlego${process.env.NEXT_PUBLIC_SECRET_KEY}`,
+        authorization: `Perlego636D7B8896E513F83E62CA367BB6E`,
       },
     });
   });
@@ -28,7 +28,7 @@ describe('Book Controller', () => {
     const limit = 10;
     const books = await axios.get(`${getDomain()}api/books?limit=${limit}`, {
       headers: {
-        authorization: `Perlego${process.env.NEXT_PUBLIC_SECRET_KEY}`,
+        authorization: `Perlego636D7B8896E513F83E62CA367BB6E`,
       },
     });
     expect(books.data.length).toBe(limit);
@@ -47,7 +47,7 @@ describe('Book Controller', () => {
   it('should return 200 status', async () => {
     const books = await axios.get(`${getDomain()}api/books`, {
       headers: {
-        authorization: `Berlego${process.env.NEXT_PUBLIC_SECRET_KEY}`,
+        authorization: `Perlego636D7B8896E513F83E62CA367BB6E`,
       },
     });
     expect(books.status).toBe(200);
