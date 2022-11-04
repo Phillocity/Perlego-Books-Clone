@@ -29,6 +29,9 @@ Install the project with github clone then cd into the folder to install then ru
 Alternatively the project can be accessed on its **[deployed link here](http://next-docker-env.eba-3bzpmvwb.eu-west-1.elasticbeanstalk.com/)**
 
 # Demo
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/12134641/199932835-29d6d429-2a3d-4922-ba6c-0024cbfc04d8.gif)
+
+![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/12134641/199933258-f9ee7361-a8f4-4392-93a4-afa600b7f67b.gif)
 
 
 # Features and Extensions
@@ -75,7 +78,6 @@ While the front-end holds up, it is by no means elegant due to heavy use of boot
 Above all else, the greatest challenge was the deployment process. While I've used docker before, I'm still not very familiar with it and it took a lot of time to get it working. In the end I was able to get my app running with a mongo database but I was unable to import the iniital data I procured, therefore I moved the database onto a cloud cluster for ease of access.
 
 Overall I'm very happy with the project, in the total time of 4 days I was able to learn a new framework, create a fullstack project and deploy it to AWS.
-
 
 # Update - 1
 In a last-minute test, my core components did not render on physical mobiles or Firefox, but worked perfectly in Chrome Desktop + Mobile using the responsive dev tools function. A closer look in FireFox reveals that a class that adds a subtle fade in effect to elements was not firing.
