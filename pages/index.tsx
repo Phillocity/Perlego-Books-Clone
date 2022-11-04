@@ -72,7 +72,7 @@ export default function Home({ books }: { books: BookType[] }) {
               </div>
               <HeroSlider books={books} alt />
               <div className={`${style.shadow} text-center mt-5 d-flex justify-content-center`}>
-                <h2 className="w-50">{`Whether you're writing an essay or preparing for an exam. Study smarter with our built-in study tools.`}</h2>
+                <h2 className="w-50 d-none d-sm-block">{`Whether you're writing an essay or preparing for an exam. Study smarter with our built-in study tools.`}</h2>
               </div>
             </div>
           </div>
