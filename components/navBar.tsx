@@ -13,11 +13,11 @@ export default function NavBar({ home }: { home?: boolean }) {
           </Link>
 
           <div className="d-flex align-items-center">
-            <Link className="mx-2" href="/books">
+            <Link className="mx-1" href="/books">
               <ExploreButton />
             </Link>
 
-            <Link className="mx-2" href="https://www.perlego.com/sign-up">
+            <Link className="mx-1" href="https://www.perlego.com/sign-up">
               <CTAButton />
             </Link>
           </div>

@@ -34,7 +34,7 @@ export default function HeroSlider({ books, alt }: { books: BookType[]; alt?: bo
           <SplideSlide key={_id}>
             <Link href={unique_url}>
               <Image
-                className={`${alt ? style.heroBook : ''} rounded fade-in`}
+                className={`${alt ? style.heroBook : ''} rounded`}
                 src={img}
                 alt={title}
                 width={165}

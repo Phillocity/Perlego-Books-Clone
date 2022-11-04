@@ -27,13 +27,6 @@ a {
   box-sizing: border-box;
 }
 
-.fade-in {
-  opacity: 0;
-  animation: fadeIn ease 1s;
-  animation-fill-mode: forwards;
-  animation-duration: 1s;
-}
-
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
