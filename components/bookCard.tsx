@@ -27,13 +27,13 @@ export default function Book({ _id, unique_url, title, author, img, category }: 
       <div
         onMouseOver={handleMouseIn}
         onMouseOut={handleMouseOut}
-        className={`${style.bookCard} px-0 fade-in col-12 col-sm-6 col-md-4 col-lg-5 col-xl-3 col-xxl-2`}
+        className={`${style.bookCard} px-0  col-12 col-sm-6 col-md-4 col-lg-5 col-xl-3 col-xxl-2`}
         key={_id}
       >
         <Link href={unique_url}>
           <div className={`${style.bookItem} pb-3`}>
             <div className={style.bookImage}>
-              <Image src={img} alt={title} width={160} height={245} className="fade-in" placeholder="blur" blurDataURL="/loader.svg" />
+              <Image src={img} alt={title} width={160} height={245} placeholder="blur" blurDataURL="/loader.svg" />
             </div>
 
             {/* ---------------------------------------------------------------------------------------------- */
@@ -58,7 +58,7 @@ export default function Book({ _id, unique_url, title, author, img, category }: 
             height={70}
             onMouseOver={handleMouseIn}
             onMouseOut={handleMouseOut}
-            className={`${style.bookmark} ${hoverBookmark} fade-in`}
+            className={`${style.bookmark} ${hoverBookmark} `}
           />
         </Link>
       </div>

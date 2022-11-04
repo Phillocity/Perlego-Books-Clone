@@ -38,7 +38,7 @@ export default function Home({ books }: { books: BookType[] }) {
         <div onMouseMove={e => handleMove(e)} onTouchMove={e => handleMove(e)} className={style.fluid}>
           <div style={{ width: `${left}%` }} ref={leftDOM} id={style['left-side']} className={style.side}>
             <div className={style.title}>
-              <div className="row justify-content-start w-50 m-auto mb-5 fade-in">
+              <div className="row justify-content-start w-50 m-auto mb-5">
                 <div
                   className={`top-wrap m-auto p-0 d-flex col-12 col-md-6 flex-row justify-content-start justify-content-md-end justify-content-sm-start justify-content-xs-start align-items-center`}
                 >
@@ -49,7 +49,7 @@ export default function Home({ books }: { books: BookType[] }) {
               </div>
               <HeroSlider books={books} />
               <div className={`${style.shadow} text-center mt-5 d-flex justify-content-center`}>
-                <h2 className="w-50 text-white fade-in d-none d-sm-block">
+                <h2 className="w-50 text-white d-none d-sm-block">
                   The complete academic library with over 1,000,000+ textbooks, articles and tools at your fingertips.
                 </h2>
               </div>
@@ -72,7 +72,7 @@ export default function Home({ books }: { books: BookType[] }) {
               </div>
               <HeroSlider books={books} alt />
               <div className={`${style.shadow} text-center mt-5 d-flex justify-content-center`}>
-                <h2 className="w-50 fade-in">{`Whether you're writing an essay or preparing for an exam. Study smarter with our built-in study tools.`}</h2>
+                <h2 className="w-50">{`Whether you're writing an essay or preparing for an exam. Study smarter with our built-in study tools.`}</h2>
               </div>
             </div>
           </div>
