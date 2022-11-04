@@ -75,3 +75,11 @@ While the front-end holds up, it is by no means elegant due to heavy use of boot
 Above all else, the greatest challenge was the deployment process. While I've used docker before, I'm still not very familiar with it and it took a lot of time to get it working. In the end I was able to get my app running with a mongo database but I was unable to import the iniital data I procured, therefore I moved the database onto a cloud cluster for ease of access.
 
 Overall I'm very happy with the project, in the total time of 4 days I was able to learn a new framework, create a fullstack project and deploy it to AWS.
+
+
+# Update - 1
+In a last-minute test, my core components did not render on physical mobiles or Firefox, but worked perfectly in Chrome Desktop + Mobile using the responsive dev tools function. A closer look in FireFox reveals that a class that adds a subtle fade in effect to elements was not firing.
+
+Therefore leaving any element with a class of **"fade in"** to be permanently set to opacity:0 as opposed to having a brief transiton to opacity:1.
+
+A quick fix here would be to just remove the class entirely. But in the long run this should be investigated more and serve as a reminder that beyond mobiles there are also other browsers to consider.
