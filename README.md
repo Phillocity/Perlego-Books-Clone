@@ -1,6 +1,6 @@
 # Perlego Fullstack Project Overview
 
-A fullstack project utilising a React front-end with an API backend for a "Book Recommendation" component with optional extensions. Stack consisted of:
+A fullstack project utilising a React front-end with an API backend for a "Book Recommendation" component with further extensions. Stack consisted of:
 
 **Tech:**
 * NextJS
@@ -58,7 +58,12 @@ Initially began with a simple initial **Figma** mockup of the design which can b
 
 **NextJS** was used abstract a lot of the setup with Webpack and Babel. The project was then built with TypeScript, Bootstrap and SCSS for the front-end whilst the API was built with Next API Routes and MongoDB. The project was tested with Jest and but with no time left to implement end-to-end testing. Finally the project was then deployed to AWS Elastic Beanstalk with a Docker container.
 
-[**Jira**](https://phillipworld.atlassian.net/jira/software/projects/PFA/boards/2) was used to track the project and its progress in an kanban manner. While the task itself was simple I broke down the project into a number of smaller tasks that I could complete and split into a roadmap of backend, front-end, deployment and SEO if there's time. This allowed me to track my progress efficiently.
+**Jira** was used to track the project and its progress in an kanban manner. While the task itself was simple I broke down the project into a number of smaller tasks that I could complete and split into a roadmap of backend, front-end, deployment and SEO if there's time. This allowed me to track my progress efficiently.
+
+![Untitled](https://user-images.githubusercontent.com/12134641/203983105-0309a52f-b047-48c1-a3f5-8b6a885ae19b.png)
+
+![Untitle1d](https://user-images.githubusercontent.com/12134641/203983198-c9c36f91-f38c-408e-adb2-7a014e67fc05.png)
+
 
 **Important notice** -
 *Credentials of databases, Aloglia keys and secret auth keys have been hardcoded to allow easy access for external parties.
