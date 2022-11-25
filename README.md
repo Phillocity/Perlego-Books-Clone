@@ -21,8 +21,8 @@ A fullstack project utilising a React front-end with an API backend for a "Book 
 Install the project with github clone then cd into the folder to install then run npm run dev. This *should* open a server on port 3000.
 
 ```bash
-  git clone https://github.com/Phillocity/phillip-ebper
-  cd phillip-ebper
+  git clone https://github.com/Phillocity/Perlego-Books-Clone
+  cd Perlego-Books-Clone
   docker-compose up
 ```
 
